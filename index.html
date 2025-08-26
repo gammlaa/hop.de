@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacken ohne Pause</title>
+<style>
+  /* Grundlegende Styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    background: #0d0d0d;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Leiterbahnen-Hintergrund größeres Grid */
+  body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+      repeating-linear-gradient(90deg, #00fffc 0 2px, transparent 2px 50px),
+      repeating-linear-gradient(0deg, #ff00ff 0 2px, transparent 2px 50px);
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  /* Zentrierte Box mit Mindestabstand von 10px */
+  .box {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 20px); /* immer 10px Abstand links und rechts */
+    max-width: 600px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #00fffc;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00fffc;
+  }
+
+  /* Titel Styles */
+  .box h1 {
+    color: #00fffc;
+    font-size: 3em;
+    text-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
+    margin-bottom: 20px;
+    animation: neonPulse 5s infinite; /* langsameres Pulsieren */
+  }
+
+  /* Untertitel Styles */
+  .box p {
+    color: #ff00ff;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00fffc;
+  }
+
+  /* Neon Puls Animation */
+  @keyframes neonPulse {
+    0%, 100% {
+      text-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #00fffc, 0 0 40px #ff00ff;
+    }
+  }
+
+  /* Footer Styles */
+  footer {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fffc;
+    text-align: center;
+    padding: 5px;
+    border-top: 2px solid #ff00ff;
+    box-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
+    font-size: 0.9em;
+  }
+
+  footer a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>Hacken ohne Pause</h1>
+    <p>27. September 2025 | Chaospott</p>
+  </div>
+
+  <footer>
+    <p>Sibyllastr. 9, 45136 Essen <a href="https://chaospott.de" target="_blank">chaospott.de</a></p>
+  </footer>
+</body>
+</html>
+
