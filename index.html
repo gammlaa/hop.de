@@ -1,108 +1,388 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hacken ohne Pause</title>
-<style>
-  /* Grundlegende Styles */
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Courier New', Courier, monospace;
-    background: #0d0d0d;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hacken Ohne Pause: 24 Stunden hacken vom 26. September 2026 um 12 Uhr bis zum 27. September 2026 um 12 Uhr im Chaospott Essen.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="canonical" href="https://hop.de/">
 
-  /* Leiterbahnen-Hintergrund größeres Grid */
-  body::before {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background:
-      repeating-linear-gradient(90deg, #00fffc 0 2px, transparent 2px 50px),
-      repeating-linear-gradient(0deg, #ff00ff 0 2px, transparent 2px 50px);
-    opacity: 0.2;
-    z-index: 0;
-  }
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Hacken Ohne Pause">
+  <meta property="og:title" content="Hacken Ohne Pause — 24 Stunden Hacken">
+  <meta property="og:description" content="Vom 26.09.2026 um 12 Uhr bis zum 27.09.2026 um 12 Uhr im Chaospott Essen.">
+  <meta property="og:url" content="https://hop.de/">
 
-  /* Zentrierte Box mit Mindestabstand von 10px */
-  .box {
-    position: relative;
-    z-index: 1;
-    width: calc(100% - 20px); /* immer 10px Abstand links und rechts */
-    max-width: 600px;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.85);
-    border: 2px solid #00fffc;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00fffc;
-  }
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hacken Ohne Pause — 24 Stunden Hacken">
+  <meta name="twitter:description" content="Vom 26.09.2026 um 12 Uhr bis zum 27.09.2026 um 12 Uhr im Chaospott Essen.">
 
-  /* Titel Styles */
-  .box h1 {
-    color: #00fffc;
-    font-size: 3em;
-    text-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
-    margin-bottom: 20px;
-    animation: neonPulse 5s infinite; /* langsameres Pulsieren */
-  }
-
-  /* Untertitel Styles */
-  .box p {
-    color: #ff00ff;
-    font-size: 1.2em;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00fffc;
-  }
-
-  /* Neon Puls Animation */
-  @keyframes neonPulse {
-    0%, 100% {
-      text-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
+  <title>Hacken Ohne Pause — 26.–27.09.2026</title>
+  <style>
+    :root {
+      --bg: #09090b;
+      --panel: rgba(9, 9, 11, 0.88);
+      --cyan: #00fffc;
+      --pink: #ff00ff;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --line: rgba(0, 255, 252, 0.28);
     }
-    50% {
-      text-shadow: 0 0 20px #00fffc, 0 0 40px #ff00ff;
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: "Courier New", Courier, monospace;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-  }
 
-  /* Footer Styles */
-  footer {
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.8);
-    color: #00fffc;
-    text-align: center;
-    padding: 5px;
-    border-top: 2px solid #ff00ff;
-    box-shadow: 0 0 10px #00fffc, 0 0 20px #ff00ff;
-    font-size: 0.9em;
-  }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        repeating-linear-gradient(90deg, var(--cyan) 0 1px, transparent 1px 56px),
+        repeating-linear-gradient(0deg, var(--pink) 0 1px, transparent 1px 56px);
+      opacity: 0.09;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
 
-  footer a {
-    color: #ff00ff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-</style>
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(0, 255, 252, 0.12), transparent 34rem),
+        radial-gradient(circle at 90% 55%, rgba(255, 0, 255, 0.1), transparent 30rem);
+      pointer-events: none;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1100px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 9, 11, 0.84);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--cyan);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-shadow: 0 0 12px rgba(0, 255, 252, 0.75);
+    }
+
+    .nav-links { display: flex; gap: 24px; }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--pink); }
+
+    .hero {
+      min-height: calc(100svh - 68px);
+      display: grid;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--pink);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before { content: "> "; color: var(--cyan); }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      color: var(--cyan);
+      font-size: clamp(3rem, 10vw, 7.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.075em;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(0, 255, 252, 0.42), 5px 5px 0 rgba(255, 0, 255, 0.7);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 42px 0 0;
+    }
+
+    .chip {
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      box-shadow: 4px 4px 0 rgba(255, 0, 255, 0.4);
+    }
+
+    .chip strong { color: var(--cyan); }
+
+    .scroll-hint {
+      display: inline-block;
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-decoration: none;
+      animation: blink 1.4s step-end infinite;
+    }
+
+    section { padding: 110px 0; }
+
+    .section-label {
+      margin: 0 0 24px;
+      color: var(--pink);
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 30px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    h2 span { color: var(--cyan); }
+
+    .intro {
+      max-width: 780px;
+      margin: 0;
+      color: #d4d4d8;
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 54px;
+    }
+
+    .card {
+      min-height: 220px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: inset 0 0 30px rgba(0, 255, 252, 0.025);
+    }
+
+    .card .number { color: var(--pink); font-size: 0.8rem; }
+    .card h3 { margin: 38px 0 10px; color: var(--cyan); font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .schedule {
+      border-top: 1px solid var(--line);
+      margin-top: 50px;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 30px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .schedule-row time { color: var(--pink); font-weight: 700; }
+    .schedule-row p { margin: 0; }
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 40px;
+      padding: clamp(28px, 5vw, 60px);
+      border: 2px solid var(--cyan);
+      background: var(--panel);
+      box-shadow: 12px 12px 0 rgba(255, 0, 255, 0.45), 0 0 32px rgba(0, 255, 252, 0.12);
+    }
+
+    .location-box h2 { margin-bottom: 18px; }
+    .location-box p { margin: 0; color: var(--muted); font-size: 1.1rem; }
+
+    .button {
+      display: inline-block;
+      padding: 14px 20px;
+      border: 1px solid var(--pink);
+      color: var(--pink);
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: 150ms ease;
+    }
+
+    .button:hover, .button:focus-visible {
+      background: var(--pink);
+      color: var(--bg);
+      box-shadow: 0 0 24px rgba(255, 0, 255, 0.45);
+    }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid rgba(255, 0, 255, 0.35);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer .wrap { display: flex; justify-content: space-between; gap: 20px; }
+    footer a { color: var(--cyan); text-decoration: none; }
+
+    @keyframes blink { 50% { opacity: 0.25; } }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .wrap { width: min(100% - 28px, 1100px); }
+      h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
+      .grid { grid-template-columns: 1fr; }
+      .location-box { grid-template-columns: 1fr; align-items: start; }
+      section { padding: 80px 0; }
+    }
+
+    @media (max-width: 460px) {
+      .schedule-row { grid-template-columns: 1fr; gap: 4px; }
+      footer .wrap { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .scroll-hint { animation: none; }
+    }
+  </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Hacken ohne Pause</h1>
-    <p>2026 | Chaospott</p>
-  </div>
+  <header>
+    <nav class="wrap" aria-label="Hauptnavigation">
+      <a class="logo" href="#top">HOP_2026</a>
+      <div class="nav-links">
+        <a href="#event">Event</a>
+        <a href="#termin">Termin</a>
+        <a href="#ort">Ort</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">System bereit</p>
+        <h1 id="hero-title">Hacken<br>Ohne Pause</h1>
+        <div class="hero-meta" aria-label="Veranstaltungsdetails">
+          <div class="chip"><strong>START</strong> 26.09.2026 · 12:00 UHR</div>
+          <div class="chip"><strong>ENDE</strong> 27.09.2026 · 12:00 UHR</div>
+          <div class="chip"><strong>DAUER</strong> 24 STUNDEN</div>
+          <div class="chip"><strong>ORT</strong> CHAOSPOTT ESSEN</div>
+        </div>
+        <a class="scroll-hint" href="#event">[ mehr erfahren ↓ ]</a>
+      </div>
+    </section>
+
+    <section id="event">
+      <div class="wrap">
+        <p class="section-label">01 / Das Event</p>
+        <h2>24 Stunden für <span>Neugierige.</span></h2>
+        <p class="intro">Einen Tag und eine Nacht lang gemeinsam tüfteln, voneinander lernen und Ideen in Code und Hardware verwandeln. Bring dein Projekt, deine Fragen oder einfach nur Neugier mit — wir sorgen für Raum, Strom und gute Gesellschaft.</p>
+
+        <div class="grid">
+          <article class="card">
+            <span class="number">[01]</span>
+            <h3>BAUEN</h3>
+            <p>Arbeite an deinem Projekt oder finde spontan Mitstreiter:innen für eine neue Idee.</p>
+          </article>
+          <article class="card">
+            <span class="number">[02]</span>
+            <h3>LERNEN</h3>
+            <p>Tausche Wissen aus, stelle Fragen und zeig anderen, woran du gerade arbeitest.</p>
+          </article>
+          <article class="card">
+            <span class="number">[03]</span>
+            <h3>VERNETZEN</h3>
+            <p>Lerne Menschen aus der lokalen Hacker- und Makerszene kennen — ganz ohne Pitch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="termin">
+      <div class="wrap">
+        <p class="section-label">02 / Termin</p>
+        <h2>Save the <span>date.</span></h2>
+        <div class="schedule">
+          <div class="schedule-row">
+            <time datetime="2026-09-26">26.09.2026</time>
+            <p>Samstag</p>
+          </div>
+          <div class="schedule-row">
+            <time datetime="2026-09-26T12:00">ab 12:00 Uhr</time>
+            <p>Samstag, 26.09. — Start der Veranstaltung</p>
+          </div>
+          <div class="schedule-row">
+            <time datetime="2026-09-27T12:00">bis 12:00 Uhr</time>
+            <p>Sonntag, 27.09. — Ende nach 24 Stunden</p>
+          </div>
+          <div class="schedule-row">
+            <span>Chaospott</span>
+            <p>Sibyllastraße 9, 45136 Essen</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ort">
+      <div class="wrap">
+        <div class="location-box">
+          <div>
+            <p class="section-label">03 / Anreise</p>
+            <h2>Chaospott <span>Essen</span></h2>
+            <p>Sibyllastraße 9<br>45136 Essen</p>
+          </div>
+          <a class="button" href="https://www.openstreetmap.org/search?query=Sibyllastra%C3%9Fe%209%2C%2045136%20Essen" target="_blank" rel="noopener noreferrer">ROUTE ÖFFNEN ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>Sibyllastr. 9, 45136 Essen <a href="https://chaospott.de" target="_blank">chaospott.de</a></p>
+    <div class="wrap">
+      <span>HACKEN OHNE PAUSE // 26.–27.09.2026 // 24H</span>
+      <a href="https://chaospott.de" target="_blank" rel="noopener noreferrer">chaospott.de ↗</a>
+    </div>
   </footer>
 </body>
 </html>
-
