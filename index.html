@@ -91,7 +91,6 @@
       z-index: 10;
       border-bottom: 1px solid var(--line);
       background: rgba(9, 9, 11, 0.84);
-      backdrop-filter: blur(14px);
     }
 
     nav {
@@ -136,6 +135,13 @@
     }
 
     .eyebrow::before { content: "> "; color: var(--cyan); }
+
+    .eyebrow::after {
+      content: "█";
+      margin-left: 0.35em;
+      color: var(--cyan);
+      animation: blink 1s step-end infinite;
+    }
 
     h1 {
       max-width: 900px;
@@ -294,6 +300,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .eyebrow::after { animation: none; }
       .scroll-hint { animation: none; }
     }
   </style>
