@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="630"
+   viewBox="0 0 1200 630"
+   version="1.1"
+   id="svg17"
+   sodipodi:docname="og-image.svg"
+   inkscape:export-filename="og-image.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.83174603"
+     inkscape:cx="600.54389"
+     inkscape:cy="315"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g16" />
+  <defs
+     id="defs3">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#grid"
+       id="pattern17"
+       patternTransform="translate(0,2)" />
+    <style
+       id="style1">
+      @font-face {
+        font-family: &quot;Courier Prime&quot;;
+        src: url(&quot;fonts/CourierPrime-Regular.ttf&quot;) format(&quot;truetype&quot;);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: &quot;Courier Prime&quot;;
+        src: url(&quot;fonts/CourierPrime-Bold.ttf&quot;) format(&quot;truetype&quot;);
+        font-weight: 700;
+      }
+      .mono { font-family: &quot;Courier Prime&quot;, &quot;Courier New&quot;, monospace; }
+    </style>
+    <pattern
+       id="grid"
+       width="56"
+       height="56"
+       patternUnits="userSpaceOnUse">
+      <path
+         d="M 56 0 L 0 0 0 56"
+         fill="none"
+         stroke="#00fffc"
+         stroke-width="1"
+         opacity="0.13"
+         id="path1" />
+      <path
+         d="M 0 56 L 56 56 56 0"
+         fill="none"
+         stroke="#ff00ff"
+         stroke-width="1"
+         opacity="0.08"
+         id="path2" />
+    </pattern>
+    <filter
+       id="softGlow"
+       x="-0.0044886061"
+       y="-0.026574298"
+       width="1.0089772"
+       height="1.0531486">
+      <feGaussianBlur
+         stdDeviation="0.77203438"
+         result="blur"
+         id="feGaussianBlur2" />
+      <feMerge
+         id="feMerge3">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode2" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode3" />
+      </feMerge>
+    </filter>
+    <filter
+       id="filter19"
+       x="-0.0042303742"
+       y="-0.041612998"
+       width="1.0084607"
+       height="1.083226">
+      <feGaussianBlur
+         stdDeviation="1.2089375"
+         result="blur"
+         id="feGaussianBlur18" />
+      <feMerge
+         id="feMerge19">
+        <feMergeNode
+           in="blur"
+           id="feMergeNode18" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode19" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect
+     width="1200"
+     height="630"
+     fill="#09090b"
+     id="rect3" />
+  <rect
+     width="1200"
+     height="630"
+     fill="url(#grid)"
+     opacity="0.85"
+     id="rect4"
+     style="fill:url(#pattern17)"
+     x="0"
+     y="2" />
+  <rect
+     x="70"
+     y="72"
+     width="1060"
+     height="486"
+     fill="none"
+     stroke="#00fffc"
+     stroke-width="1"
+     opacity="0.42"
+     id="rect5" />
+  <rect
+     x="82"
+     y="84"
+     width="1036"
+     height="462"
+     fill="none"
+     stroke="#ff00ff"
+     stroke-width="1"
+     opacity="0.22"
+     id="rect6" />
+  <text
+     class="mono"
+     x="104"
+     y="132"
+     fill="#ff00ff"
+     font-size="28"
+     font-weight="700"
+     letter-spacing="3"
+     id="text6">&gt; SYSTEM BEREIT</text>
+  <rect
+     x="404"
+     y="112"
+     width="18"
+     height="28"
+     fill="#00fffc"
+     id="rect7" />
+  <text
+     class="mono"
+     x="111"
+     y="287"
+     fill="#ff00ff"
+     font-size="116"
+     font-weight="700"
+     letter-spacing="0"
+     opacity="0.72"
+     id="text7">HACKEN</text>
+  <text
+     class="mono"
+     x="104"
+     y="280"
+     fill="#00fffc"
+     font-size="116"
+     font-weight="700"
+     letter-spacing="0"
+     filter="url(#softGlow)"
+     id="text8"
+     style="filter:url(#softGlow)">HACKEN</text>
+  <text
+     class="mono"
+     x="111"
+     y="406"
+     fill="#ff00ff"
+     font-size="116"
+     font-weight="700"
+     letter-spacing="0"
+     opacity="0.72"
+     id="text9">OHNE PAUSE</text>
+  <text
+     class="mono"
+     x="104"
+     y="399"
+     fill="#00fffc"
+     font-size="116"
+     font-weight="700"
+     letter-spacing="0"
+     filter="url(#softGlow)"
+     id="text10"
+     style="filter:url(#filter19)">OHNE PAUSE</text>
+  <g
+     class="mono"
+     font-size="25"
+     id="g16">
+    <rect
+       x="104"
+       y="462"
+       width="306"
+       height="56"
+       fill="#09090b"
+       opacity="0.92"
+       stroke="#00fffc"
+       stroke-width="1"
+       id="rect10" />
+    <text
+       x="124"
+       y="498"
+       fill="#00fffc"
+       font-weight="700"
+       id="text11">START</text>
+    <text
+       x="214"
+       y="498"
+       fill="#f4f4f5"
+       id="text12">26.09.2026</text>
+    <rect
+       x="432"
+       y="462"
+       width="292"
+       height="56"
+       fill="#09090b"
+       opacity="0.92"
+       stroke="#00fffc"
+       stroke-width="1"
+       id="rect12" />
+    <text
+       x="452"
+       y="498"
+       fill="#00fffc"
+       font-weight="700"
+       id="text13">DAUER</text>
+    <text
+       x="542"
+       y="498"
+       fill="#f4f4f5"
+       id="text14">24 STUNDEN</text>
+    <rect
+       x="745.93243"
+       y="461.93243"
+       width="261.16568"
+       height="56.135136"
+       fill="#09090b"
+       opacity="0.92"
+       stroke="#00fffc"
+       stroke-width="0.864863"
+       id="rect14" />
+    <text
+       x="766"
+       y="498"
+       fill="#00fffc"
+       font-weight="700"
+       id="text15">ORT</text>
+    <text
+       x="832"
+       y="498"
+       fill="#f4f4f5"
+       id="text16">CHAOSPOTT</text>
+  </g>
+  <text
+     class="mono"
+     x="104"
+     y="577"
+     fill="#a1a1aa"
+     font-size="24px"
+     id="text17">hackenohnepause.de // 26.-27.09.2026 // 12:00-12:00</text>
+</svg>
